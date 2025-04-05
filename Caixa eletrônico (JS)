@@ -1,0 +1,28 @@
+alert("digite um número de acordo com seu Objetivo:") 
+let saldo = 0;
+
+while(true){
+    let funcao = prompt("1-Depositar, 2-Sacar, 3-Ver saldo, 4-Sair") 
+    if (funcao === '1'){
+        let deposito = Number(prompt(`digite o valor do deposito:`))
+        alert (`você depositou R$${deposito}`)
+        saldo += deposito
+    }
+    else if (funcao === '2'){
+        let saque = Number(prompt(`Digite o valor do saque:`))
+            if (saque >= saldo){
+                alert( `saldo insuficiente!`)
+             }
+             else 
+             saldo-=saque
+            alert(`você sacou R$${saque}`)
+    }
+    else if (funcao === '3'){
+        alert(`Seu saldo atual : ${saldo}`)
+    }
+    else if (funcao === '4'){
+        break;
+    }
+    else 
+        alert(`não há função para esse número, digite 1,2,3 ou 4.`)
+}
